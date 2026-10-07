@@ -4,620 +4,222 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <title>Bawdy Dressing | Handcrafted hair and skincare</title>
+  <meta name="description" content="Bawdy Dressing is a Black woman-owned brand of handcrafted hair and skincare, made in small batches with carefully selected ingredients." />
+
+  <!-- Link previews (Instagram, Facebook, text messages) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Bawdy Dressing | Intentional care for your skin and hair" />
+  <meta property="og:description" content="Handcrafted hair and skincare, made in small batches with carefully chosen ingredients." />
+  <!-- LATER: upload a product photo (e.g. share.jpg) and add this line with your full site address:
+  <meta property="og:image" content="https://YOURUSERNAME.github.io/share.jpg" /> -->
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%232A1620'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='40' text-anchor='middle' fill='%23D4A64A'%3EB%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Jost:wght@400;500;600&display=swap" rel="stylesheet" />
+
   <!-- ============================================================
-    YOUR WEBSITE — Powered by GitHub Pages
-    Built at the CMET "Your Website Should Be Making You Money"
-    Workshop | Orlando, FL | September 2026
-
-    HOW TO CUSTOMIZE THIS PAGE:
-    Search for each label below and replace the placeholder text
-    with your own information. No coding required.
-
-    CUSTOMIZE:
-    1. YOUR BUSINESS NAME
-    2. YOUR TAGLINE
-    3. YOUR HERO HEADLINE
-    4. YOUR HERO SUBHEADLINE
-    5. YOUR ABOUT TEXT
-    6. YOUR SERVICE 1, 2, 3
-    7. YOUR TESTIMONIAL
-    8. YOUR CALL TO ACTION
-    9. YOUR CONTACT INFO
-    10. YOUR ACCENT COLOR (find #2C6E49 and replace with your color)
+    THINGS TO REPLACE (search this file for each one):
+    1. STORE-LINK-HERE  -> the web address where customers buy
+       (appears 3 times: nav button, hero button, closing button)
+    2. YOUR-EMAIL@example.com -> your real email (appears 2 times)
+    3. Optional: add your Instagram link in the Contact section
   ============================================================ -->
 
-  <title>YOUR BUSINESS NAME — YOUR TAGLINE</title>
-  <meta name="description" content="YOUR TAGLINE. Serving YOUR CITY." />
-
   <style>
-    /* ── Reset ── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    /* ── Design Tokens ──
-       To change your brand color, replace every instance of #2C6E49
-       with any color you like. Use Google "color picker" to find one.
-    ── */
     :root {
-      --accent:       #2C6E49;   /* YOUR ACCENT COLOR — change this */
-      --accent-light: #EAF3DE;
-      --accent-dark:  #1a4a2e;
-      --text:         #1a1a1a;
-      --text-muted:   #555;
-      --border:       #e0e0e0;
-      --bg:           #ffffff;
-      --bg-soft:      #f8f8f6;
-      --radius:       10px;
-      --max:          780px;
+      --plum:   #2A1620;
+      --cream:  #F7EFEA;
+      --gold:   #D4A64A;
+      --gold-d: #8A5A14;
+      --blush:  #F3E6E1;
+      --paper:  #FBF8F6;
+      --muted:  #5E4B52;
+      --line:   #E3D3CD;
+      --max:    1000px;
     }
 
-    /* ── Base ── */
     html { scroll-behavior: smooth; }
     body {
-      font-family: Georgia, 'Times New Roman', serif;
-      color: var(--text);
-      background: var(--bg);
-      line-height: 1.75;
+      font-family: 'Jost', system-ui, sans-serif;
       font-size: 18px;
+      line-height: 1.7;
+      color: var(--plum);
+      background: var(--paper);
     }
-    img { max-width: 100%; display: block; }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    a { color: var(--gold-d); }
+    :focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
 
-    /* ── Layout ── */
-    .container {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 1.5rem; }
+    h1, h2, h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 600; line-height: 1.1; }
 
-    /* ── Navigation ── */
-    nav {
-      position: sticky;
-      top: 0;
-      background: var(--bg);
-      border-bottom: 1px solid var(--border);
-      z-index: 100;
-      padding: 1rem 0;
-    }
-    nav .container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-    }
-    .nav-brand {
-      font-size: 1.1rem;
-      font-weight: bold;
-      color: var(--accent);
-      letter-spacing: -0.01em;
-    }
-    .nav-links {
-      display: flex;
-      gap: 1.5rem;
-      list-style: none;
-      font-family: system-ui, sans-serif;
-      font-size: 0.9rem;
-    }
-    .nav-links a { color: var(--text-muted); }
-    .nav-links a:hover { color: var(--accent); text-decoration: none; }
-
-    /* ── Hero ── */
-    .hero {
-      padding: 5rem 0 4rem;
-      text-align: center;
-    }
-    .hero-eyebrow {
-      font-family: system-ui, sans-serif;
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 1.25rem;
-    }
-    .hero h1 {
-      font-size: clamp(2rem, 5vw, 3.25rem);
-      line-height: 1.15;
-      letter-spacing: -0.02em;
-      margin-bottom: 1.25rem;
-      color: var(--text);
-    }
-    .hero-sub {
-      font-size: 1.15rem;
-      color: var(--text-muted);
-      max-width: 560px;
-      margin: 0 auto 2.25rem;
-      font-family: system-ui, sans-serif;
-      line-height: 1.6;
-    }
+    /* Buttons */
     .btn {
       display: inline-block;
-      background: var(--accent);
-      color: #fff;
-      font-family: system-ui, sans-serif;
-      font-size: 1rem;
+      background: var(--gold);
+      color: var(--plum);
       font-weight: 600;
+      font-size: 1rem;
       padding: 0.85rem 2rem;
-      border-radius: var(--radius);
+      border-radius: 4px;
+      text-decoration: none;
       transition: background 0.2s;
     }
-    .btn:hover { background: var(--accent-dark); text-decoration: none; }
-    .btn-outline {
-      background: transparent;
-      border: 2px solid var(--accent);
-      color: var(--accent);
-      margin-left: 0.75rem;
-    }
-    .btn-outline:hover { background: var(--accent-light); }
+    .btn:hover { background: #E2BA68; }
+    .btn-small { padding: 0.5rem 1.1rem; font-size: 0.9rem; }
 
-    /* ── Trust Bar ── */
-    .trust-bar {
-      background: var(--bg-soft);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      padding: 1.25rem 0;
-      text-align: center;
-    }
-    .trust-bar p {
-      font-family: system-ui, sans-serif;
-      font-size: 0.9rem;
-      color: var(--text-muted);
-    }
-    .trust-bar strong { color: var(--text); }
+    /* Navigation */
+    .nav { background: var(--plum); position: sticky; top: 0; z-index: 10; }
+    .nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; padding-top: 0.75rem; padding-bottom: 0.75rem; }
+    .brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.6rem; font-weight: 600; color: var(--cream); text-decoration: none; }
+    .nav ul { display: flex; align-items: center; gap: 1.5rem; list-style: none; font-size: 0.95rem; }
+    .nav ul a:not(.btn) { color: var(--cream); text-decoration: none; }
+    .nav ul a:not(.btn):hover { color: var(--gold); }
 
-    /* ── Section base ── */
-    section { padding: 4rem 0; }
-    .section-label {
-      font-family: system-ui, sans-serif;
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 0.6rem;
-    }
-    .section-title {
-      font-size: clamp(1.6rem, 3.5vw, 2.2rem);
-      line-height: 1.2;
-      letter-spacing: -0.01em;
-      margin-bottom: 1rem;
-    }
-    .section-intro {
-      font-family: system-ui, sans-serif;
-      font-size: 1rem;
-      color: var(--text-muted);
-      max-width: 560px;
-      line-height: 1.65;
-      margin-bottom: 2.5rem;
-    }
+    /* Hero */
+    .hero { background: var(--plum); color: var(--cream); padding: 6rem 0 7rem; }
+    .hero h1 { font-size: clamp(2.8rem, 8vw, 5.5rem); max-width: 12ch; color: var(--cream); margin-bottom: 1.5rem; }
+    .hero p { font-size: 1.2rem; max-width: 34rem; color: #E7D8D2; margin-bottom: 2.25rem; }
+    .hero .rule { width: 72px; height: 3px; background: var(--gold); margin-bottom: 1.75rem; }
 
-    /* ── About ── */
-    .about { background: var(--bg-soft); }
-    .about-inner {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: center;
-    }
-    .about-photo {
-      width: 100%;
-      aspect-ratio: 4/5;
-      background: var(--accent-light);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: system-ui, sans-serif;
-      font-size: 0.85rem;
-      color: var(--accent);
-      text-align: center;
-      padding: 1rem;
-      /* REPLACE THIS BLOCK with an <img> tag once you have a photo:
-         <img src="your-photo.jpg" alt="YOUR NAME" style="border-radius:12px;width:100%;"> */
-    }
-    .about-text p {
-      font-size: 1rem;
-      line-height: 1.8;
-      color: var(--text);
-      margin-bottom: 1rem;
-    }
-    .about-text p:last-child { margin-bottom: 0; }
+    /* Sections */
+    section { padding: 5rem 0; }
+    h2 { font-size: clamp(2rem, 4.5vw, 2.8rem); margin-bottom: 1rem; }
+    .intro { color: var(--muted); max-width: 34rem; margin-bottom: 2.5rem; }
 
-    /* ── Services ── */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-      gap: 1.5rem;
-      margin-top: 0.5rem;
-    }
-    .service-card {
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.75rem 1.5rem;
-    }
-    .service-icon {
-      width: 44px;
-      height: 44px;
-      background: var(--accent-light);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.4rem;
-      margin-bottom: 1rem;
-    }
-    .service-card h3 {
-      font-size: 1.05rem;
-      margin-bottom: 0.5rem;
-      letter-spacing: -0.01em;
-    }
-    .service-card p {
-      font-family: system-ui, sans-serif;
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
+    /* Collection */
+    .item { display: grid; grid-template-columns: 1fr 1.6fr; gap: 2rem; padding: 1.75rem 0; border-top: 1px solid var(--line); }
+    .item:last-child { border-bottom: 1px solid var(--line); }
+    .item h3 { font-size: 1.9rem; }
+    .item p { color: var(--muted); max-width: 34rem; }
 
-    /* ── Testimonial ── */
-    .testimonial { background: var(--accent); color: #fff; }
-    .testimonial blockquote {
-      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-      line-height: 1.55;
-      max-width: 640px;
-      margin: 0 auto 1.5rem;
-      text-align: center;
-      font-style: italic;
-    }
-    .testimonial cite {
-      display: block;
-      text-align: center;
-      font-family: system-ui, sans-serif;
-      font-size: 0.9rem;
-      font-style: normal;
-      opacity: 0.85;
-    }
+    /* About */
+    .about { background: var(--blush); }
+    .about .text { max-width: 38rem; }
+    .about p { margin-bottom: 1.1rem; }
 
-    /* ── CTA ── */
-    .cta { text-align: center; background: var(--bg-soft); }
-    .cta .section-title { max-width: 520px; margin: 0 auto 1rem; }
-    .cta .section-intro { margin: 0 auto 2rem; }
-    .cta-buttons { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
+    /* Closing call to action */
+    .closing { background: var(--plum); color: var(--cream); text-align: center; }
+    .closing h2 { color: var(--cream); max-width: 20ch; margin: 0 auto 1.75rem; }
 
-    /* ── Contact ── */
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-    .contact-item {
-      font-family: system-ui, sans-serif;
-    }
-    .contact-item .label {
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 0.35rem;
-    }
-    .contact-item .value {
-      font-size: 1rem;
-      color: var(--text);
-    }
+    /* Contact */
+    .contact p { margin-bottom: 0.5rem; }
 
-    /* ── Footer ── */
-    footer {
-      background: var(--text);
-      color: rgba(255,255,255,0.6);
-      padding: 2rem 0;
-      text-align: center;
-      font-family: system-ui, sans-serif;
-      font-size: 0.85rem;
-    }
-    footer strong { color: #fff; }
-    footer a { color: rgba(255,255,255,0.7); }
+    footer { background: var(--plum); color: #D9C7C0; text-align: center; font-size: 0.9rem; padding: 1.75rem 0; border-top: 1px solid #4A3039; }
+    footer a { color: var(--gold); }
 
-    /* ── Divider ── */
-    hr.section-rule {
-      border: none;
-      border-top: 1px solid var(--border);
-      margin: 0;
-    }
-
-    /* ── Mobile ── */
     @media (max-width: 640px) {
-      .hero { padding: 3.5rem 0 3rem; }
-      .about-inner { grid-template-columns: 1fr; }
-      .about-photo { aspect-ratio: 3/2; }
-      .btn-outline { margin-left: 0; }
-      .nav-links { gap: 1rem; }
+      body { font-size: 17px; }
+      .hero { padding: 4rem 0 4.5rem; }
+      section { padding: 3.5rem 0; }
+      .item { grid-template-columns: 1fr; gap: 0.5rem; }
+      .nav ul { gap: 1rem; }
     }
-
-    /* ── Reduced motion ── */
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
+      .btn { transition: none; }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- ════════════════════════════════════════════
-    NAVIGATION
-    Replace: YOUR BUSINESS NAME, and the nav links
-             if you add more sections.
-  ════════════════════════════════════════════ -->
-  <nav>
-    <div class="container">
-      <span class="nav-brand">YOUR BUSINESS NAME</span>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+  <header class="nav">
+    <div class="wrap">
+      <a class="brand" href="#top">Bawdy Dressing</a>
+      <nav aria-label="Main">
+        <ul>
+          <li><a href="#collection">Collection</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <!-- REPLACE STORE-LINK-HERE with your store address -->
+          <li><a class="btn btn-small" href="STORE-LINK-HERE">Shop</a></li>
+        </ul>
+      </nav>
     </div>
-  </nav>
+  </header>
 
+  <main id="top">
 
-  <!-- ════════════════════════════════════════════
-    HERO
-    Replace: YOUR HERO HEADLINE
-             YOUR HERO SUBHEADLINE
-             YOUR CITY / SERVICE AREA
-             The two button labels and href links
-  ════════════════════════════════════════════ -->
-  <section class="hero">
-    <div class="container">
-      <p class="hero-eyebrow">YOUR CITY &amp; SURROUNDING AREAS</p>
-      <h1>YOUR HERO HEADLINE<br>That Makes Someone Stop Scrolling</h1>
-      <p class="hero-sub">
-        YOUR HERO SUBHEADLINE — one or two sentences that speak directly
-        to your ideal customer and the result you deliver for them.
-      </p>
-      <div>
-        <a href="#contact" class="btn">Get Started Today</a>
-        <a href="#about" class="btn btn-outline">Learn More</a>
+    <section class="hero" style="padding-top:6rem">
+      <div class="wrap">
+        <div class="rule"></div>
+        <h1>Intentional care for your skin and hair.</h1>
+        <p>Handcrafted hair and skincare, made in small batches with carefully chosen ingredients. Healthy-looking skin and hair, without the complicated routine.</p>
+        <!-- REPLACE STORE-LINK-HERE with your store address -->
+        <a class="btn" href="STORE-LINK-HERE">Shop the Collection</a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <div class="trust-bar">
-    <div class="container">
-      <p>
-        <strong>Trusted by families and businesses across YOUR CITY.</strong>
-        &nbsp;·&nbsp; YOUR CREDENTIAL OR CERTIFICATION
-        &nbsp;·&nbsp; YOUR YEARS IN BUSINESS
-      </p>
-    </div>
-  </div>
+    <section id="collection">
+      <div class="wrap">
+        <h2>The collection</h2>
+        <p class="intro">Every product is handcrafted by me, in small batches, with intention and care.</p>
 
-  <hr class="section-rule" />
+        <!-- To add your real product names, change the headings (h3) and text below.
+             To add a photo to an item, put an image tag above its <h3>:
+             <img src="your-photo.jpg" alt="Describe the product" style="max-width:100%;border-radius:4px;"> -->
 
-
-  <!-- ════════════════════════════════════════════
-    ABOUT
-    Replace: YOUR NAME
-             YOUR ABOUT TEXT (paste Claude's output here)
-             Photo placeholder: replace the <div class="about-photo">
-             block with <img src="your-photo.jpg" alt="YOUR NAME"
-             style="border-radius:12px;width:100%;">
-  ════════════════════════════════════════════ -->
-  <section class="about" id="about">
-    <div class="container">
-      <div class="about-inner">
-
-        <div class="about-photo">
-          📷 Replace this box with<br>your professional photo.<br><br>
-          Tip: A clear, well-lit<br>headshot builds trust<br>faster than anything else.
+        <div class="item">
+          <h3>Hair care</h3>
+          <p>Nourishing products made to help your hair hold moisture and look healthy and shiny. They fit into a simple routine, with no ten-step process.</p>
         </div>
-
-        <div class="about-text">
-          <p class="section-label">About</p>
-          <h2 class="section-title">YOUR NAME</h2>
-
-          <!-- PASTE YOUR CLAUDE-GENERATED ABOUT TEXT BELOW -->
-          <p>
-            YOUR ABOUT PARAGRAPH ONE — who you are, what you do,
-            and why you do it. This is where your story begins.
-            Claude will write this for you during the workshop.
-          </p>
-          <p>
-            YOUR ABOUT PARAGRAPH TWO — your experience, your
-            credentials, and the community you serve. Be specific.
-            The more real this sounds, the more people trust you.
-          </p>
-          <p>
-            YOUR ABOUT PARAGRAPH THREE — what makes you different.
-            Not just what you do, but how you show up for your clients.
-          </p>
-          <!-- END CLAUDE-GENERATED TEXT -->
+        <div class="item">
+          <h3>Skincare</h3>
+          <p>Soft, moisturized, glowing-looking skin from carefully selected ingredients you can recognize. Made for everyday use, so consistency feels easy.</p>
         </div>
-
-      </div>
-    </div>
-  </section>
-
-  <hr class="section-rule" />
-
-
-  <!-- ════════════════════════════════════════════
-    SERVICES
-    Replace: Section intro text
-             Each service card: icon emoji, name, description
-             Add or remove cards as needed — just copy/paste
-             a <div class="service-card"> block.
-  ════════════════════════════════════════════ -->
-  <section id="services">
-    <div class="container">
-      <p class="section-label">What I Offer</p>
-      <h2 class="section-title">Services</h2>
-      <p class="section-intro">
-        Every service is delivered with care, professionalism,
-        and a commitment to the people I serve.
-      </p>
-
-      <div class="services-grid">
-
-        <div class="service-card">
-          <div class="service-icon">⭐</div>
-          <h3>YOUR SERVICE 1</h3>
-          <p>
-            A one or two sentence description of this service.
-            What does the client get? What problem does it solve?
-          </p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">✅</div>
-          <h3>YOUR SERVICE 2</h3>
-          <p>
-            A one or two sentence description of this service.
-            Be specific about who it is for and what they receive.
-          </p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">💬</div>
-          <h3>YOUR SERVICE 3</h3>
-          <p>
-            A one or two sentence description of this service.
-            Use plain language your customers already understand.
-          </p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <hr class="section-rule" />
-
-
-  <!-- ════════════════════════════════════════════
-    TESTIMONIAL
-    Replace: The quote text
-             CLIENT NAME, their title or description
-             (e.g. "Parent of two, Orlando FL")
-  ════════════════════════════════════════════ -->
-  <section class="testimonial">
-    <div class="container">
-      <blockquote>
-        "YOUR CLIENT'S WORDS GO HERE — a real quote from someone
-        whose life or business improved because of your work.
-        The more specific and genuine, the more powerful it is."
-      </blockquote>
-      <cite>— CLIENT NAME, Client Description or Location</cite>
-    </div>
-  </section>
-
-
-  <!-- ════════════════════════════════════════════
-    CALL TO ACTION
-    Replace: The headline, the subtext, and
-             the button text / href links.
-  ════════════════════════════════════════════ -->
-  <section class="cta">
-    <div class="container">
-      <h2 class="section-title">Ready to Get Started?</h2>
-      <p class="section-intro">
-        YOUR CALL TO ACTION — tell your visitor exactly what
-        you want them to do next and why they should do it today.
-      </p>
-      <div class="cta-buttons">
-        <a href="#contact" class="btn">Contact Me Today</a>
-        <a href="tel:+10000000000" class="btn btn-outline">Call Now</a>
-      </div>
-    </div>
-  </section>
-
-  <hr class="section-rule" />
-
-
-  <!-- ════════════════════════════════════════════
-    CONTACT
-    Replace: YOUR PHONE NUMBER
-             YOUR EMAIL ADDRESS
-             YOUR CITY, STATE
-             YOUR HOURS
-             YOUR SOCIAL MEDIA LINK (or remove it)
-  ════════════════════════════════════════════ -->
-  <section id="contact">
-    <div class="container">
-      <p class="section-label">Get in Touch</p>
-      <h2 class="section-title">Contact</h2>
-      <p class="section-intro">
-        Ready to take the next step? Reach out — I respond to
-        every inquiry personally.
-      </p>
-
-      <div class="contact-grid">
-        <div class="contact-item">
-          <div class="label">Phone</div>
-          <div class="value">
-            <a href="tel:+10000000000">YOUR PHONE NUMBER</a>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="label">Email</div>
-          <div class="value">
-            <a href="mailto:you@youremail.com">YOUR EMAIL ADDRESS</a>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="label">Location</div>
-          <div class="value">YOUR CITY, FL</div>
-        </div>
-        <div class="contact-item">
-          <div class="label">Hours</div>
-          <div class="value">YOUR BUSINESS HOURS</div>
+        <div class="item">
+          <h3>Beard care</h3>
+          <p>Moisturizing care for beards, made to leave them soft and comfortable. A gentle option if irritation has been an issue.</p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
+    <section class="about" id="about">
+      <div class="wrap">
+        <div class="text">
+          <h2>Made with intention</h2>
+          <!-- To add a photo of yourself or your products, put an image tag here:
+               <img src="your-photo.jpg" alt="Describe the photo" style="max-width:100%;border-radius:4px;margin-bottom:1.5rem;"> -->
+          <p>Bawdy Dressing is a Black woman-owned beauty and body care brand created with Black women in mind and open to anyone who cares about what goes on their body. Every product is handcrafted by me, in small batches, with intention and care.</p>
+          <p>I started Bawdy Dressing because our hair and skin have needs of their own, and I wanted care that nourishes without piling on steps or ingredients you can't pronounce. I choose each ingredient on purpose, and I want you to know exactly why a product is in your hands.</p>
+          <p>I'm not here to follow trends. I'm here to make quality body care you can trust, so that taking care of yourself feels like an enjoyable part of your day.</p>
+        </div>
+      </div>
+    </section>
 
-  <!-- ════════════════════════════════════════════
-    FOOTER
-    Replace: YOUR BUSINESS NAME
-             The current year if needed
-             YOUR SOCIAL MEDIA LINK (or remove it)
-  ════════════════════════════════════════════ -->
+    <!-- LATER: when you have a real customer quote (with their permission), add it here:
+    <section class="about"><div class="wrap"><h2>What customers say</h2><p>"Their words here." Name, city</p></div></section> -->
+
+    <section class="closing">
+      <div class="wrap">
+        <h2>Find the product that becomes part of your everyday self-care.</h2>
+        <!-- REPLACE STORE-LINK-HERE with your store address -->
+        <a class="btn" href="STORE-LINK-HERE">Shop the Collection</a>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap">
+        <h2>Questions? Say hello.</h2>
+        <!-- REPLACE YOUR-EMAIL@example.com in both places below -->
+        <p>Email me at <a href="mailto:YOUR-EMAIL@example.com">YOUR-EMAIL@example.com</a>.</p>
+        <!-- OPTIONAL Instagram: <p>Follow along on <a href="https://instagram.com/YOURHANDLE">Instagram</a>.</p> -->
+      </div>
+    </section>
+
+  </main>
+
   <footer>
-    <div class="container">
-      <p>
-        &copy; 2026 <strong>YOUR BUSINESS NAME</strong>
-        &nbsp;·&nbsp; YOUR CITY, FL
-        &nbsp;·&nbsp; <a href="mailto:you@youremail.com">YOUR EMAIL</a>
-      </p>
-      <p style="margin-top:0.5rem; font-size:0.8rem; opacity:0.6;">
-        Built with purpose at the
-        <a href="https://tcmet.org" style="color:rgba(255,255,255,0.5);">CMET</a>
-        "Your Website Should Be Making You Money" Workshop &mdash; Orlando, FL &mdash; September 2026
-      </p>
+    <div class="wrap">
+      <p>&copy; 2026 Bawdy Dressing. Handcrafted in small batches.</p>
+      <p style="margin-top:0.4rem;font-size:0.8rem;">Built at the <a href="https://tcmet.org">CMET</a> "Your Website Should Be Making You Money" Workshop, Orlando, FL. You can remove this line anytime.</p>
     </div>
   </footer>
-1. Hero Headline
-Nourishing care, handcrafted for the woman you are.
-Two alternates: "Hair and skin care made with intention, never trends." or "Simple, intentional care for your hair and skin."
-2. Hero Subheadline
-Handcrafted hair and skincare made with ingredients you can trust, for soft, glowing skin and healthy, moisturized hair. No ten-step routine required.
-3. About
-Who I am
-I'm the founder of Bawdy Dressing, a Black woman-owned beauty and body care brand. I started it because I wanted products made with Black women in mind, and made by someone who truly understands what our hair and skin need. Everyone who cares about what they put on their body is welcome here.
-How I make it
-Every product is handcrafted by me, in small batches, with carefully selected ingredients. Small batches mean I know exactly what goes into each jar and bottle, and I give each one my full attention. My customers tell me they notice the difference: better moisture, softer skin, shinier hair, and more compliments on how good they smell than they know what to do with.
-What makes us different
-I'm not here to chase trends. I want you to know exactly why you're choosing what goes on your body, and I keep your routine simple enough to fit a full life. Whether you're a busy professional, a mother, or an entrepreneur, self-care shouldn't feel like another chore.
-4. Product Descriptions
-Hair Care
-Nourishing, handcrafted hair products that help your hair hold onto moisture and look healthy and shiny. Made for those who want strong, long-looking hair without a complicated routine.
-Skin Care
-Plant-based skincare that leaves your skin soft, moisturized, and glowing. Each product is made with ingredients you'll recognize, so you can feel good about what you're using.
-Beard Care
-Moisturizing care that keeps beards soft and comfortable, with less irritation. It's a simple everyday step for anyone who wants a healthier-feeling beard.
-5. Call to Action
-Shop the collection today and find the handcrafted essential that turns your self-care into a routine you'll love.
+
 </body>
 </html>
